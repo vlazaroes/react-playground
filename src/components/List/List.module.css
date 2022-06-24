@@ -5,19 +5,19 @@
   overflow: hidden;
 }
 
-.ListItems {
+.Items {
   list-style: none;
 }
 
 .ListEmpty {
-  border-bottom: 1px solid #353546;
+  border-bottom: 1px solid #373748;
   padding: 16px;
 }
 
-.ListFooter {
+.Footer {
   padding: 8px 16px;
 }
 
-.ListItemsLeft {
+.ItemsLeft {
   font-size: 14px;
 }

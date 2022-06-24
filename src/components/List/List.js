@@ -23,7 +23,7 @@ export default class List extends React.Component {
 
     return (
       <div className={ListStyles.List}>
-        <ul className={ListStyles.ListItems}>
+        <ul className={ListStyles.Items}>
           {items.length === 0 &&
             <li className={ListStyles.ListEmpty}>The list is empty.</li>
           }
@@ -36,8 +36,8 @@ export default class List extends React.Component {
             />
           )}
         </ul>
-        <footer className={ListStyles.ListFooter}>
-          <p className={ListStyles.ListItemsLeft}>{itemsLeftCount} items left</p>
+        <footer className={ListStyles.Footer}>
+          <p className={ListStyles.ItemsLeft}>{itemsLeftCount} items left</p>
         </footer>
       </div>
     )
