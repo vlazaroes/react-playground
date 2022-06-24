@@ -1,0 +1,11 @@
+.container {
+  margin: 48px auto 0 auto;
+  max-width: 480px;
+  padding: 0 16px;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
