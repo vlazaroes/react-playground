@@ -1,15 +1,16 @@
 import React from 'react';
-import './ListItem.css';
+import classNames from 'classnames';
+import ListItemStyles from './ListItem.module.css';
 
-class ListItem extends React.Component {
+export default class ListItem extends React.Component {
   constructor(props) {
     super(props);
-    this.onChangeCompleted = this.onChangeCompleted.bind(this);
+    this.onChangeCompletedItem = this.onChangeCompletedItem.bind(this);
     this.onRemoveItem = this.onRemoveItem.bind(this);
   }
 
-  onChangeCompleted() {
-    this.props.onChangeCompleted(this.props.item.id);
+  onChangeCompletedItem() {
+    this.props.onChangeCompletedItem(this.props.item.id);
   }
 
   onRemoveItem() {
@@ -20,22 +21,24 @@ class ListItem extends React.Component {
     const { label, completed } = this.props.item;
 
     return (
-      <li className={`item ${completed ? 'item--completed' : ''}`}>
+      <li className={classNames(ListItemStyles.Item, {
+        [ListItemStyles.ItemCompleted]: completed,
+      })}>
         <input
-          className="item__completed"
+          className={ListItemStyles.Check}
           type="checkbox"
           checked={completed}
-          onChange={this.onChangeCompleted}
+          onChange={this.onChangeCompletedItem}
         />
-        <p className="item__label">{label}</p>
-        <div className="item__options">
+        <p className={ListItemStyles.Label}>{label}</p>
+        <div className={ListItemStyles.Options}>
           <button
-            className="option"
+            className={ListItemStyles.RemoveButton}
             type="button"
             onClick={this.onRemoveItem}
           >
             <img
-              className="option__remove"
+              className={ListItemStyles.RemoveIcon}
               src="icons/trash.svg"
               alt="Remove item icon"
               height="16"
@@ -48,5 +51,3 @@ class ListItem extends React.Component {
     )
   }
 }
-
-export default ListItem;
