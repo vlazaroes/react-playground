@@ -27,22 +27,22 @@ export default class AddItem extends React.Component {
 
     return (
       <form
-        className={AddItemStyles.AddForm}
+        className={AddItemStyles.Form}
         onSubmit={this.onSubmit}
       >
         <input
-          className={AddItemStyles.AddField}
+          className={AddItemStyles.Field}
           type="text"
           placeholder="Add a new item..."
           value={label}
           onChange={this.onChangeInput}
         />
         <button
-          className={AddItemStyles.AddSubmit}
+          className={AddItemStyles.SubmitButton}
           type="submit"
         >
           <img
-            className={AddItemStyles.AddSubmitIcon}
+            className={AddItemStyles.SubmitIcon}
             src="icons/circle.svg"
             alt="Add item icon"
             height="16"
