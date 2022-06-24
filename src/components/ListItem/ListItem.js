@@ -1,7 +1,7 @@
 import React from 'react';
 import './ListItem.css';
 
-class LastItem extends React.Component {
+class ListItem extends React.Component {
     constructor(props) {
         super(props);
         this.onChangeCompleted = this.onChangeCompleted.bind(this);
@@ -51,4 +51,4 @@ class LastItem extends React.Component {
     }
 }
 
-export default LastItem;
+export default ListItem;
