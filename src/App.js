@@ -21,7 +21,7 @@ class App extends React.Component {
       ]
     };
     this.onAddItem = this.onAddItem.bind(this);
-    this.onChangeCompleted = this.onChangeCompleted.bind(this);
+    this.onChangeCompletedItem = this.onChangeCompletedItem.bind(this);
     this.onRemoveItem = this.onRemoveItem.bind(this);
   }
 
@@ -35,7 +35,7 @@ class App extends React.Component {
     }));
   }
 
-  onChangeCompleted(itemId) {
+  onChangeCompletedItem(itemId) {
     this.setState((state, props) => ({
       items: state.items.map(item => item.id === itemId ? { ...item, completed: !item.completed } : item)
     }));
@@ -56,7 +56,7 @@ class App extends React.Component {
         <AddItem onAddItem={this.onAddItem} />
         <List
           items={items}
-          onChangeCompleted={this.onChangeCompleted}
+          onChangeCompletedItem={this.onChangeCompletedItem}
           onRemoveItem={this.onRemoveItem}
         />
       </div>
