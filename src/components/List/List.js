@@ -1,16 +1,16 @@
 import React from 'react';
 import ListItem from '../ListItem/ListItem';
-import './List.css';
+import ListStyles from './List.module.css';
 
-class List extends React.Component {
+export default class List extends React.Component {
   constructor(props) {
     super(props);
-    this.onChangeCompleted = this.onChangeCompleted.bind(this);
+    this.onChangeCompletedItem = this.onChangeCompletedItem.bind(this);
     this.onRemoveItem = this.onRemoveItem.bind(this);
   }
 
-  onChangeCompleted(itemId) {
-    this.props.onChangeCompleted(itemId);
+  onChangeCompletedItem(itemId) {
+    this.props.onChangeCompletedItem(itemId);
   }
 
   onRemoveItem(itemId) {
@@ -22,26 +22,24 @@ class List extends React.Component {
     const itemsLeftCount = items.filter(item => item.completed === false).length;
 
     return (
-      <div className="list">
-        <ul className="list__items">
+      <div className={ListStyles.List}>
+        <ul className={ListStyles.ListItems}>
           {items.length === 0 &&
-            <li className="list__empty">The list is empty.</li>
+            <li className={ListStyles.ListEmpty}>The list is empty.</li>
           }
           {items.length > 0 && items.map(item =>
             <ListItem
               key={item.id}
               item={item}
-              onChangeCompleted={this.onChangeCompleted}
+              onChangeCompletedItem={this.onChangeCompletedItem}
               onRemoveItem={this.onRemoveItem}
             />
           )}
         </ul>
-        <footer className="list__footer">
-          <p className="footer__count">{itemsLeftCount} items left</p>
+        <footer className={ListStyles.ListFooter}>
+          <p className={ListStyles.ListItemsLeft}>{itemsLeftCount} items left</p>
         </footer>
       </div>
     )
   }
 }
-
-export default List;
