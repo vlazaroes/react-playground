@@ -1,6 +1,5 @@
 .item {
     align-items: center;
-    background-color: #21212B;
     border-bottom: 1px solid #353546;
     display: flex;
     list-style: none;
@@ -44,14 +43,14 @@
     transition: right 0.15s ease-in-out;
 }
 
-.item__option {
+.option {
     background-color: transparent;
     border: 0;
     display: flex;
     padding: 6px;
 }
 
-.item__option:hover {
+.option:hover {
     cursor: pointer;
 }
 

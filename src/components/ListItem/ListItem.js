@@ -9,31 +9,29 @@ class ListItem extends React.Component {
     }
 
     onChangeCompleted() {
-        this.props.onChangeCompleted(this.props.id);
+        this.props.onChangeCompleted(this.props.item.id);
     }
 
     onRemoveItem() {
-        this.props.onRemoveItem(this.props.id);
+        this.props.onRemoveItem(this.props.item.id);
     }
 
     render() {
-        const { label, completed } = this.props;
+        const { label, completed } = this.props.item;
 
         return (
             <li className={`item ${completed ? 'item--completed' : ''}`}>
                 <input
                     className="item__completed"
                     type="checkbox"
-                    name="item-completed"
-                    value={completed}
+                    checked={completed}
                     onChange={this.onChangeCompleted}
                 />
                 <p className="item__label">{label}</p>
                 <div className="item__options">
                     <button
-                        className="item__option"
+                        className="option"
                         type="button"
-                        name="item-remove"
                         onClick={this.onRemoveItem}
                     >
                         <img
