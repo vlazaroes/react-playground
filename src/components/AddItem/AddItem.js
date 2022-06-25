@@ -11,10 +11,11 @@ export default class AddItem extends React.Component {
 
   onSubmit(event) {
     event.preventDefault();
-    if (!this.state.label) {
+    const label = this.state.label.trim();
+    if (!label) {
       return;
     }
-    this.props.onAddItem(this.state.label.trim());
+    this.props.onAddItem(label);
     this.setState({ label: '' });
   }
 
