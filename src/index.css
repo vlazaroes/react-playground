@@ -7,10 +7,6 @@
   padding: 0;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
