@@ -12,6 +12,10 @@
   background-color: #2C2C39;
 }
 
+.Item:last-child {
+  border-bottom: 0;
+}
+
 .ItemCompleted .Label {
   text-decoration: line-through;
 }
