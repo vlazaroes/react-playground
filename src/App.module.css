@@ -1,11 +1,11 @@
-.container {
+.Container {
   margin: 48px auto 0 auto;
   max-width: 480px;
   padding: 0 16px;
 }
 
-.title {
+.Title {
   color: #ffffff;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 24px;
 }

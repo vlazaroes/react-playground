@@ -1,9 +1,9 @@
 import React from 'react';
 import AddItem from './components/AddItem/AddItem';
 import List from './components/List/List';
-import './App.css';
+import AppStyles from './App.module.css';
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -51,8 +51,8 @@ class App extends React.Component {
     const { items } = this.state;
 
     return (
-      <div className="container">
-        <h1 className="title">React Playground</h1>
+      <div className={AppStyles.Container}>
+        <h1 className={AppStyles.Title}>React Playground</h1>
         <AddItem onAddItem={this.onAddItem} />
         <List
           items={items}
@@ -63,5 +63,3 @@ class App extends React.Component {
     )
   }
 }
-
-export default App;
