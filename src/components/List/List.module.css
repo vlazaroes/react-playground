@@ -7,6 +7,8 @@
 
 .Items {
   list-style: none;
+  max-height: 380px;
+  overflow-y: auto;
 }
 
 .ListEmpty {
@@ -15,6 +17,7 @@
 }
 
 .Footer {
+  border-top: 1px solid #373748;
   padding: 8px 16px;
 }
 
