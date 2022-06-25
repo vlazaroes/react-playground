@@ -39,7 +39,7 @@ export default class ListItem extends React.Component {
           >
             <img
               className={ListItemStyles.RemoveIcon}
-              src="icons/trash.svg"
+              src="icons/remove.svg"
               alt="Remove item icon"
               height="16"
               weight="16"
