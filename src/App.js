@@ -11,14 +11,14 @@ export default class App extends React.Component {
         {
           id: 0,
           label: 'Drinking water.',
-          completed: true
+          completed: true,
         },
         {
           id: 1,
           label: 'Go shopping.',
-          completed: false
+          completed: false,
         },
-      ]
+      ],
     };
     this.onAddItem = this.onAddItem.bind(this);
     this.onChangeCompletedItem = this.onChangeCompletedItem.bind(this);
@@ -27,39 +27,42 @@ export default class App extends React.Component {
 
   onAddItem(itemLabel) {
     this.setState((state, props) => ({
-      items: [...state.items, {
-        id: +new Date(),
-        label: itemLabel,
-        completed: false
-      }]
+      items: [
+        ...state.items,
+        {
+          id: +new Date(),
+          label: itemLabel,
+          completed: false,
+        },
+      ],
     }));
   }
 
   onChangeCompletedItem(itemId) {
     this.setState((state, props) => ({
-      items: state.items.map(item => item.id === itemId ? { ...item, completed: !item.completed } : item)
+      items: state.items.map((item) => (item.id === itemId ? {...item, completed: !item.completed} : item)),
     }));
   }
 
   onRemoveItem(itemId) {
     this.setState((state, props) => ({
-      items: state.items.filter(item => item.id !== itemId)
+      items: state.items.filter((item) => item.id !== itemId),
     }));
   }
 
   render() {
-    const { items } = this.state;
+    const {items} = this.state;
 
     return (
       <div className={AppStyles.Container}>
         <header className={AppStyles.Header}>
           <img
             className={AppStyles.ReactIcon}
-            src="icons/react.svg"
-            alt="React logo"
-            height="32"
-            weight="32"
-            loading="lazy"
+            src='icons/react.svg'
+            alt='React logo'
+            height='32'
+            weight='32'
+            loading='lazy'
           />
           <h1 className={AppStyles.Title}>React Playground</h1>
         </header>
@@ -70,6 +73,6 @@ export default class App extends React.Component {
           onRemoveItem={this.onRemoveItem}
         />
       </div>
-    )
+    );
   }
 }

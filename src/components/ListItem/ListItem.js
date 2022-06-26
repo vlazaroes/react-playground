@@ -18,15 +18,16 @@ export default class ListItem extends React.Component {
   }
 
   render() {
-    const { label, completed } = this.props.item;
+    const {label, completed} = this.props.item;
 
     return (
-      <li className={classNames(ListItemStyles.Item, {
-        [ListItemStyles.ItemCompleted]: completed,
-      })}>
+      <li
+        className={classNames(ListItemStyles.Item, {
+          [ListItemStyles.ItemCompleted]: completed,
+        })}>
         <input
           className={ListItemStyles.Check}
-          type="checkbox"
+          type='checkbox'
           checked={completed}
           onChange={this.onChangeCompletedItem}
         />
@@ -34,20 +35,19 @@ export default class ListItem extends React.Component {
         <div className={ListItemStyles.Options}>
           <button
             className={ListItemStyles.RemoveButton}
-            type="button"
-            onClick={this.onRemoveItem}
-          >
+            type='button'
+            onClick={this.onRemoveItem}>
             <img
               className={ListItemStyles.RemoveIcon}
-              src="icons/remove.svg"
-              alt="Remove item icon"
-              height="16"
-              weight="16"
-              loading="lazy"
+              src='icons/remove.svg'
+              alt='Remove item icon'
+              height='16'
+              weight='16'
+              loading='lazy'
             />
           </button>
         </div>
       </li>
-    )
+    );
   }
 }

@@ -4,7 +4,7 @@ import AddItemStyles from './AddItem.module.css';
 export default class AddItem extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { label: '' }
+    this.state = {label: ''};
     this.onSubmit = this.onSubmit.bind(this);
     this.onChangeInput = this.onChangeInput.bind(this);
   }
@@ -16,42 +16,40 @@ export default class AddItem extends React.Component {
       return;
     }
     this.props.onAddItem(label);
-    this.setState({ label: '' });
+    this.setState({label: ''});
   }
 
   onChangeInput(event) {
-    this.setState({ label: event.target.value });
+    this.setState({label: event.target.value});
   }
 
   render() {
-    const { label } = this.state;
+    const {label} = this.state;
 
     return (
       <form
         className={AddItemStyles.Form}
-        onSubmit={this.onSubmit}
-      >
+        onSubmit={this.onSubmit}>
         <input
           className={AddItemStyles.Field}
-          type="text"
-          placeholder="Add a new item..."
+          type='text'
+          placeholder='Add a new item...'
           value={label}
           onChange={this.onChangeInput}
         />
         <button
           className={AddItemStyles.SubmitButton}
-          type="submit"
-        >
+          type='submit'>
           <img
             className={AddItemStyles.SubmitIcon}
-            src="icons/circle.svg"
-            alt="Add item icon"
-            height="16"
-            weight="16"
-            loading="lazy"
+            src='icons/circle.svg'
+            alt='Add item icon'
+            height='16'
+            weight='16'
+            loading='lazy'
           />
         </button>
       </form>
-    )
+    );
   }
 }
