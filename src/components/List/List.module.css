@@ -12,7 +12,9 @@
 }
 
 .ListEmpty {
-  border-bottom: 1px solid #373748;
+  align-items: center;
+  display: flex;
+  min-height: 62px;
   padding: 16px;
 }
 

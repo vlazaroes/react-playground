@@ -3,9 +3,9 @@
   border-bottom: 1px solid #373748;
   display: flex;
   gap: 16px;
+  min-height: 62px;
   overflow: hidden;
   padding: 16px;
-  position: relative;
 }
 
 .Item:hover {
