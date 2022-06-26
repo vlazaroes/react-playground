@@ -25,6 +25,7 @@
 }
 
 .Label {
+  line-height: 1.5;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
