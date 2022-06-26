@@ -27,8 +27,8 @@
   padding: 6px;
 }
 
-.SubmitButton:hover {
-  filter: brightness(1.2);
+.SubmitButton:hover .SubmitIcon {
+  filter: brightness(1.4);
 }
 
 .SubmitIcon {
