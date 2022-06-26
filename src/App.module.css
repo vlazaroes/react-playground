@@ -1,11 +1,22 @@
 .Container {
-  margin: 48px auto 0 auto;
+  margin: 0 auto;
   max-width: 480px;
-  padding: 0 16px;
+  padding: 48px 16px 0 16px;
+}
+
+.Header {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.ReactIcon {
+  height: 32px;
+  width: 32px;
 }
 
 .Title {
   color: #ffffff;
   font-size: 28px;
-  margin-bottom: 24px;
 }

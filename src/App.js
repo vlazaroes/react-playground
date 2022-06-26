@@ -52,7 +52,17 @@ export default class App extends React.Component {
 
     return (
       <div className={AppStyles.Container}>
-        <h1 className={AppStyles.Title}>React Playground</h1>
+        <header className={AppStyles.Header}>
+          <img
+            className={AppStyles.ReactIcon}
+            src="icons/react.svg"
+            alt="React logo"
+            height="32"
+            weight="32"
+            loading="lazy"
+          />
+          <h1 className={AppStyles.Title}>React Playground</h1>
+        </header>
         <AddItem onAddItem={this.onAddItem} />
         <List
           items={items}
