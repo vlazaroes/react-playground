@@ -18,7 +18,7 @@ export default class ListItem extends React.Component {
   }
 
   render() {
-    const {label, completed} = this.props.item;
+    const {id, label, completed} = this.props.item;
 
     return (
       <li
@@ -26,12 +26,17 @@ export default class ListItem extends React.Component {
           [ListItemStyles.ItemCompleted]: completed,
         })}>
         <input
+          id={id}
           className={ListItemStyles.Check}
           type='checkbox'
           checked={completed}
           onChange={this.onChangeCompletedItem}
         />
-        <p className={ListItemStyles.Label}>{label}</p>
+        <label
+          for={id}
+          className={ListItemStyles.Label}>
+          {label}
+        </label>
         <div className={ListItemStyles.Options}>
           <button
             className={ListItemStyles.RemoveButton}
