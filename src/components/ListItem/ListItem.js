@@ -33,7 +33,7 @@ export default class ListItem extends React.Component {
           onChange={this.onChangeCompletedItem}
         />
         <label
-          for={id}
+          htmlFor={id}
           className={ListItemStyles.Label}>
           {label}
         </label>
