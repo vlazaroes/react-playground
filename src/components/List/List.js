@@ -18,7 +18,7 @@ export default class List extends React.Component {
   }
 
   render() {
-    const {items} = this.props;
+    const { items } = this.props;
     const itemsLeftCount = items.filter((item) => item.completed === false).length;
 
     return (

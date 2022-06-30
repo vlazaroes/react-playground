@@ -18,7 +18,7 @@ export default class ListItem extends React.Component {
   }
 
   render() {
-    const {id, label, completed} = this.props.item;
+    const { id, label, completed } = this.props.item;
 
     return (
       <li

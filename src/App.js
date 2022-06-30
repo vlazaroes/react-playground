@@ -40,7 +40,9 @@ export default class App extends React.Component {
 
   onChangeCompletedItem(itemId) {
     this.setState((state, props) => ({
-      items: state.items.map((item) => (item.id === itemId ? {...item, completed: !item.completed} : item)),
+      items: state.items.map((item) =>
+        item.id === itemId ? { ...item, completed: !item.completed } : item
+      ),
     }));
   }
 
@@ -51,7 +53,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    const {items} = this.state;
+    const { items } = this.state;
 
     return (
       <div className={AppStyles.Container}>
