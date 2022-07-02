@@ -1,6 +1,7 @@
-import React from 'react';
-import ListItem from '../ListItem/ListItem';
-import ListStyles from './List.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import ListItem from "../ListItem/ListItem";
+import ListStyles from "./List.module.css";
 
 export default class List extends React.Component {
   constructor(props) {
@@ -42,3 +43,15 @@ export default class List extends React.Component {
     );
   }
 }
+
+List.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.number.isRequired,
+      label: PropTypes.string.isRequired,
+      completed: PropTypes.bool.isRequired,
+    })
+  ).isRequired,
+  onChangeCompletedItem: PropTypes.func.isRequired,
+  onRemoveItem: PropTypes.func.isRequired,
+};

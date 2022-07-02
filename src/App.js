@@ -1,7 +1,7 @@
-import React from 'react';
-import AddItem from './components/AddItem/AddItem';
-import List from './components/List/List';
-import AppStyles from './App.module.css';
+import React from "react";
+import AddItem from "./components/AddItem/AddItem";
+import List from "./components/List/List";
+import AppStyles from "./App.module.css";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -10,12 +10,12 @@ export default class App extends React.Component {
       items: [
         {
           id: 0,
-          label: 'Drinking water.',
+          label: "Drinking water.",
           completed: true,
         },
         {
           id: 1,
-          label: 'Go shopping.',
+          label: "Go shopping.",
           completed: false,
         },
       ],
@@ -26,7 +26,7 @@ export default class App extends React.Component {
   }
 
   onAddItem(itemLabel) {
-    this.setState((state, props) => ({
+    this.setState((state) => ({
       items: [
         ...state.items,
         {
@@ -39,7 +39,7 @@ export default class App extends React.Component {
   }
 
   onChangeCompletedItem(itemId) {
-    this.setState((state, props) => ({
+    this.setState((state) => ({
       items: state.items.map((item) =>
         item.id === itemId ? { ...item, completed: !item.completed } : item
       ),
@@ -47,7 +47,7 @@ export default class App extends React.Component {
   }
 
   onRemoveItem(itemId) {
-    this.setState((state, props) => ({
+    this.setState((state) => ({
       items: state.items.filter((item) => item.id !== itemId),
     }));
   }
@@ -60,11 +60,11 @@ export default class App extends React.Component {
         <header className={AppStyles.Header}>
           <img
             className={AppStyles.ReactIcon}
-            src='icons/react.svg'
-            alt='React logo'
-            height='32'
-            weight='32'
-            loading='lazy'
+            src="icons/react.svg"
+            alt="React logo"
+            height="32"
+            weight="32"
+            loading="lazy"
           />
           <h1 className={AppStyles.Title}>React Playground</h1>
         </header>

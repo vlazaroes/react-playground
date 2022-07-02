@@ -9,7 +9,7 @@
 }
 
 .Item:hover {
-  background-color: #2C2C39;
+  background-color: #2c2c39;
 }
 
 .Item:last-child {
@@ -21,7 +21,7 @@
 }
 
 .Check {
-  accent-color: #FC77A1;
+  accent-color: #fc77a1;
 }
 
 .Label {

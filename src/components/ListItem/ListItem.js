@@ -1,6 +1,7 @@
-import React from 'react';
-import classNames from 'classnames';
-import ListItemStyles from './ListItem.module.css';
+import React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import ListItemStyles from "./ListItem.module.css";
 
 export default class ListItem extends React.Component {
   constructor(props) {
@@ -24,31 +25,34 @@ export default class ListItem extends React.Component {
       <li
         className={classNames(ListItemStyles.Item, {
           [ListItemStyles.ItemCompleted]: completed,
-        })}>
+        })}
+      >
         <input
           id={id}
           className={ListItemStyles.Check}
-          type='checkbox'
+          type="checkbox"
           checked={completed}
           onChange={this.onChangeCompletedItem}
         />
         <label
           htmlFor={id}
-          className={ListItemStyles.Label}>
+          className={ListItemStyles.Label}
+        >
           {label}
         </label>
         <div className={ListItemStyles.Options}>
           <button
             className={ListItemStyles.RemoveButton}
-            type='button'
-            onClick={this.onRemoveItem}>
+            type="button"
+            onClick={this.onRemoveItem}
+          >
             <img
               className={ListItemStyles.RemoveIcon}
-              src='icons/remove.svg'
-              alt='Remove item icon'
-              height='16'
-              weight='16'
-              loading='lazy'
+              src="icons/remove.svg"
+              alt="Remove item icon"
+              height="16"
+              weight="16"
+              loading="lazy"
             />
           </button>
         </div>
@@ -56,3 +60,13 @@ export default class ListItem extends React.Component {
     );
   }
 }
+
+ListItem.propTypes = {
+  item: PropTypes.exact({
+    id: PropTypes.number.isRequired,
+    label: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+  }).isRequired,
+  onChangeCompletedItem: PropTypes.func.isRequired,
+  onRemoveItem: PropTypes.func.isRequired,
+};
