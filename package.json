@@ -1,23 +1,42 @@
 {
   "name": "react-playground",
   "version": "0.1.0",
+  "description": "This is my playground to apply the things I'm learning about React",
+  "author": "Víctor Lázaro Palmero",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "classnames": "^2.3.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "eslint 'src/**/*.js' --cache",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "format": "prettier 'src/**/*.*{css,js,json,md}' --write",
+    "lint": "eslint 'src/**/*.js' --cache",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint": "^8.19.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "react-scripts": "^5.0.1"
+  },
+  "lint-staged": {
+    "*.{css,js,json,md}": "prettier --write",
+    "*.js": "eslint --cache"
   },
   "browserslist": {
     "production": [
@@ -31,12 +50,12 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "eslint": "^8.18.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jest": "^26.5.3",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.30.1",
-    "prettier": "^2.7.1"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vlazaroes/react-playground.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vlazaroes/react-playground/issues"
+  },
+  "homepage": "https://github.com/vlazaroes/react-playground"
 }
