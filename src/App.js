@@ -2,6 +2,7 @@ import React from "react";
 import AddItem from "./components/AddItem/AddItem";
 import List from "./components/List/List";
 import AppStyles from "./App.module.css";
+import ReactSVG from "./assets/icons/react.svg";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -60,7 +61,7 @@ export default class App extends React.Component {
         <header className={AppStyles.Header}>
           <img
             className={AppStyles.ReactIcon}
-            src="icons/react.svg"
+            src={ReactSVG}
             alt="React logo"
             height="32"
             weight="32"

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import ListItemStyles from "./ListItem.module.css";
+import RemoveSVG from "../../assets/icons/remove.svg";
 
 export default class ListItem extends React.Component {
   constructor(props) {
@@ -48,7 +49,7 @@ export default class ListItem extends React.Component {
           >
             <img
               className={ListItemStyles.RemoveIcon}
-              src="icons/remove.svg"
+              src={RemoveSVG}
               alt="Remove item icon"
               height="16"
               weight="16"

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import AddItemStyles from "./AddItem.module.css";
+import CircleSVG from "../../assets/icons/circle.svg";
 
 export default class AddItem extends React.Component {
   constructor(props) {
@@ -45,7 +46,7 @@ export default class AddItem extends React.Component {
         >
           <img
             className={AddItemStyles.SubmitIcon}
-            src="icons/circle.svg"
+            src={CircleSVG}
             alt="Add item icon"
             height="16"
             weight="16"
