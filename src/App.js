@@ -1,8 +1,8 @@
 import React from "react";
-import AddItem from "./components/AddItem/AddItem";
-import List from "./components/List/List";
+import AddItem from "components/AddItem/AddItem";
+import List from "components/List/List";
 import AppStyles from "./App.module.css";
-import ReactSVG from "./assets/icons/react.svg";
+import ReactSVG from "assets/icons/react.svg";
 
 export default class App extends React.Component {
   constructor(props) {

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import AddItemStyles from "./AddItem.module.css";
-import CircleSVG from "../../assets/icons/circle.svg";
+import CircleSVG from "assets/icons/circle.svg";
 
 export default class AddItem extends React.Component {
   constructor(props) {

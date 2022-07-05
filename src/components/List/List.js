@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import ListItem from "../ListItem/ListItem";
+import ListItem from "components/ListItem/ListItem";
 import ListStyles from "./List.module.css";
 
 export default class List extends React.Component {

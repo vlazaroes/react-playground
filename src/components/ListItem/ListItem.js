@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import ListItemStyles from "./ListItem.module.css";
-import RemoveSVG from "../../assets/icons/remove.svg";
+import RemoveSVG from "assets/icons/remove.svg";
 
 export default class ListItem extends React.Component {
   constructor(props) {
