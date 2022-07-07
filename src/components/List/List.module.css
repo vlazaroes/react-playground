@@ -19,10 +19,24 @@
 }
 
 .Footer {
+  align-items: center;
   border-top: 1px solid #373748;
+  display: flex;
+  justify-content: space-between;
   padding: 10px 16px;
 }
 
 .ItemsLeft {
   font-size: 14px;
+}
+
+.ClearCompleted {
+  background-color: transparent;
+  border: 0;
+  font-size: 14px;
+}
+
+.ClearCompleted:hover {
+  color: #ffffff;
+  cursor: pointer;
 }

@@ -8,6 +8,7 @@ export default class List extends React.Component {
     super(props);
     this.onChangeCompletedItem = this.onChangeCompletedItem.bind(this);
     this.onRemoveItem = this.onRemoveItem.bind(this);
+    this.onClearCompleted = this.onClearCompleted.bind(this);
   }
 
   onChangeCompletedItem(itemId) {
@@ -16,6 +17,10 @@ export default class List extends React.Component {
 
   onRemoveItem(itemId) {
     this.props.onRemoveItem(itemId);
+  }
+
+  onClearCompleted() {
+    this.props.onClearCompleted();
   }
 
   render() {
@@ -38,6 +43,13 @@ export default class List extends React.Component {
         </ul>
         <footer className={ListStyles.Footer}>
           <p className={ListStyles.ItemsLeft}>{itemsLeftCount} items left</p>
+          <button
+            className={ListStyles.ClearCompleted}
+            type="button"
+            onClick={this.onClearCompleted}
+          >
+            Clear completed
+          </button>
         </footer>
       </div>
     );
@@ -54,4 +66,5 @@ List.propTypes = {
   ).isRequired,
   onChangeCompletedItem: PropTypes.func.isRequired,
   onRemoveItem: PropTypes.func.isRequired,
+  onClearCompleted: PropTypes.func.isRequired,
 };

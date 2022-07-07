@@ -24,6 +24,7 @@ export default class App extends React.Component {
     this.onAddItem = this.onAddItem.bind(this);
     this.onChangeCompletedItem = this.onChangeCompletedItem.bind(this);
     this.onRemoveItem = this.onRemoveItem.bind(this);
+    this.onClearCompleted = this.onClearCompleted.bind(this);
   }
 
   onAddItem(itemLabel) {
@@ -53,6 +54,12 @@ export default class App extends React.Component {
     }));
   }
 
+  onClearCompleted() {
+    this.setState((state) => ({
+      items: state.items.filter((item) => item.completed === false),
+    }));
+  }
+
   render() {
     const { items } = this.state;
 
@@ -74,6 +81,7 @@ export default class App extends React.Component {
           items={items}
           onChangeCompletedItem={this.onChangeCompletedItem}
           onRemoveItem={this.onRemoveItem}
+          onClearCompleted={this.onClearCompleted}
         />
       </div>
     );
