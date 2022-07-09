@@ -1,0 +1,45 @@
+.Container {
+  align-items: center;
+  border-bottom: 1px solid #373748;
+  display: flex;
+  gap: 16px;
+  padding: 10px 16px;
+}
+
+.FilterIcon {
+  height: 16px;
+  width: 16px;
+}
+
+.Filters {
+  display: flex;
+  list-style: none;
+}
+
+.Filter {
+  margin-right: 8px;
+}
+
+.Filter:last-child {
+  margin-right: 0;
+}
+
+.FilterButton {
+  background-color: transparent;
+  border: 0;
+  font-size: 14px;
+}
+
+.FilterButton:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.FilterButtonActive {
+  color: #fc77a1;
+}
+
+.FilterButtonActive:hover {
+  color: #fc77a1;
+  cursor: not-allowed;
+}
